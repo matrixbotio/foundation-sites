@@ -62,7 +62,20 @@
 
 @import 'util/util';
 
-#logo {height: 1.8rem; position: relative; top: -0.4rem; padding-left: 0 10px;}
+#logo {height: 1.8rem; position: relative; top: -0.4rem; padding: 0 10px;}
+.bot {height:2rem; padding: 0 10px}
+.switch.large input:checked ~ .switch-paddle.algo::after {left: 5.75rem;}
+.switch.large .switch-paddle.algo {width: 8rem;}
+.size-12 { font-size: 12px; }
+.size-14 { font-size: 14px; }
+.size-16 { font-size: 16px; }
+.size-18 { font-size: 18px; }
+.size-21 { font-size: 21px; }
+.size-24 { font-size: 24px; }
+.size-36 { font-size: 36px; }
+.size-48 { font-size: 48px; }
+.size-60 { font-size: 60px; }
+.size-72 { font-size: 72px; }
 
 // 1. Global
 // ---------
@@ -80,8 +93,8 @@ $foundation-palette: (
   alert: #f84960,
 );
 $light-gray: #caced3; //#e6e6e6;
-$medium-gray: #cacaca;
-$dark-gray: #8a8a8a;
+$medium-gray: #8a8a8a;
+$dark-gray: #767676;
 $black: #191B20;
 $white: #fefefe;
 $yellow: #f0b90b;
@@ -413,7 +426,7 @@ $dropdown-sizes: (
 // 18. Dropdown Menu
 // -----------------
 
-$dropdownmenu-arrows: true;
+$dropdownmenu-arrows: false;
 $dropdownmenu-arrow-color: $anchor-color;
 $dropdownmenu-arrow-size: 6px;
 $dropdownmenu-arrow-padding: 1.5rem;
@@ -448,13 +461,13 @@ $input-prefix-color: $black;
 $input-prefix-background: $light-gray;
 $input-prefix-border: 1px solid $medium-gray;
 $input-prefix-padding: 1rem;
-$form-label-color: $black;
+$form-label-color: $light-gray;
 $form-label-font-size: rem-calc(14);
 $form-label-font-weight: $global-weight-normal;
 $form-label-line-height: 1.8;
-$select-background: $white;
-$select-triangle-color: $dark-gray;
-$select-radius: $global-radius;
+$select-background: $black2;
+$select-triangle-color: $yellow;
+$select-radius: 4px;
 $input-color: $white;
 $input-placeholder-color: $medium-gray;
 $input-font-family: inherit;
@@ -784,8 +797,8 @@ $slider-radius: $global-radius;
 // 49. Switch
 // ----------
 
-$switch-background: $medium-gray;
-$switch-background-active: $primary-color;
+$switch-background: $alert-color;
+$switch-background-active: $success-color;
 $switch-height: 2rem;
 $switch-height-tiny: 1.5rem;
 $switch-height-small: 1.75rem;
