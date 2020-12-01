@@ -62,10 +62,10 @@
 
 @import 'util/util';
 
-#logo {height: 1.8rem; position: relative; top: -0.4rem; padding: 0 10px;}
+#logo {height: 2rem; position: relative; top: -0.4rem; padding: 0 10px;}
 .bot {height:2rem; padding: 0 10px}
-.switch.large input:checked ~ .switch-paddle.algo::after {left: 5.75rem;}
-.switch.large .switch-paddle.algo {width: 8rem;}
+.switch.large input:checked ~ .switch-paddle.algo::after {left: 4.75rem;}
+.switch.large .switch-paddle.algo {width: 7rem;}
 .size-12 { font-size: 12px; }
 .size-14 { font-size: 14px; }
 .size-16 { font-size: 16px; }
@@ -76,6 +76,8 @@
 .size-48 { font-size: 48px; }
 .size-60 { font-size: 60px; }
 .size-72 { font-size: 72px; }
+.orders>input {display: inline-block;  width: 3rem;  height: 1.5rem; margin-bottom: 0.5rem; text-align: center; padding: 0;}
+.orders>label {display: inline-block;  }
 
 // 1. Global
 // ---------
@@ -98,6 +100,7 @@ $dark-gray: #767676;
 $black: #191B20;
 $white: #fefefe;
 $yellow: #f0b90b;
+.yellow {color: $yellow;}
 $body-background: #12161c;
 $body-font-color: $white;
 $body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
@@ -484,7 +487,7 @@ $input-shadow: 0; //inset 0 1px 2px rgba($black, 0.1);
 $input-shadow-focus: 0; //0 0 5px $medium-gray;
 $input-cursor-disabled: not-allowed;
 $input-transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
-$input-number-spinners: true;
+$input-number-spinners: false;
 $input-radius: 4px; //$global-radius;
 $form-button-radius: $global-radius;
 
@@ -785,14 +788,14 @@ $reveal-overlay-background: rgba($black, 0.45);
 
 $slider-width-vertical: 0.5rem;
 $slider-transition: all 0.2s ease-in-out;
-$slider-height: 0.5rem;
+$slider-height: 0.4rem;
 $slider-background: $light-gray;
 $slider-fill-background: $medium-gray;
-$slider-handle-height: 1.4rem;
-$slider-handle-width: 1.4rem;
-$slider-handle-background: $primary-color;
+$slider-handle-height: 1.2rem;
+$slider-handle-width: 1.2rem;
+$slider-handle-background: $white;
 $slider-opacity-disabled: 0.25;
-$slider-radius: $global-radius;
+$slider-radius: 100px;
 
 // 49. Switch
 // ----------
@@ -895,7 +898,7 @@ $topbar-submenu-background: $black3;
 $topbar-title-spacing: 0.5rem 1rem 0.5rem 0;
 $topbar-input-width: 200px;
 $topbar-unstack-breakpoint: medium;
-.top-bar { font-size: 14px;}
+//.top-bar { font-size: 14px;}
 //.top-bar a { color: #fff;}
 
 // 56. Xy Grid
