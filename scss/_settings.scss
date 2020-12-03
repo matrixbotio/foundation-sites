@@ -62,23 +62,6 @@
 
 @import 'util/util';
 
-#logo {height: 2rem; position: relative; top: -0.4rem; padding: 0 10px;}
-.bot {height:2rem; padding: 0 10px}
-.switch.large input:checked ~ .switch-paddle.algo::after {left: 4.75rem;}
-.switch.large .switch-paddle.algo {width: 7rem;}
-.size-12 { font-size: 12px; }
-.size-14 { font-size: 14px; }
-.size-16 { font-size: 16px; }
-.size-18 { font-size: 18px; }
-.size-21 { font-size: 21px; }
-.size-24 { font-size: 24px; }
-.size-36 { font-size: 36px; }
-.size-48 { font-size: 48px; }
-.size-60 { font-size: 60px; }
-.size-72 { font-size: 72px; }
-.orders>input {display: inline-block;  width: 3rem;  height: 1.5rem; margin-bottom: 0.5rem; text-align: center; padding: 0;}
-.orders>label {display: inline-block;  }
-
 // 1. Global
 // ---------
 
@@ -915,3 +898,25 @@ $grid-padding-gutters: $grid-margin-gutters;
 $grid-container-padding: $grid-padding-gutters;
 $grid-container-max: $global-width;
 $xy-block-grid-max: 8;
+
+// Customizate
+
+#logo {height: 2rem; position: relative; top: -0.4rem; padding: 0 10px;}
+.bot {height:2rem; padding: 0 10px}
+.switch.large input:checked ~ .switch-paddle.algo::after {left: 4.75rem;}
+.switch.large .switch-paddle.algo {width: 7rem;}
+.size-12 { font-size: 12px; }
+.size-14 { font-size: 14px; }
+.size-16 { font-size: 16px; }
+.size-18 { font-size: 18px; }
+.size-21 { font-size: 21px; }
+.size-24 { font-size: 24px; }
+.size-36 { font-size: 36px; }
+.size-48 { font-size: 48px; }
+.size-60 { font-size: 60px; }
+.size-72 { font-size: 72px; }
+.orders_container {display: flex; flex-flow: wrap;}
+.orders { margin: 0 0.4rem; }
+.orders>input {display: inline-block;  width: 3rem;  height: 1.5rem; margin-bottom: 0.5rem; text-align: center; padding: 0; font-size: 0.9rem;}
+input[readonly] {color: $black}
+.orders>label {color: $dark-gray; font-size: 0.6rem; }
