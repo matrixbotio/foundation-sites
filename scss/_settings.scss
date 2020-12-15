@@ -907,8 +907,9 @@ $xy-block-grid-max: 8;
 .white {color: $white;}
 #logo {height: 2rem; position: relative; top: -0.4rem; padding: 0 10px;}
 .bot {height:2rem; padding: 0 10px}
-.switch.large input:checked ~ .switch-paddle.algo::after {left: 4.75rem;}
-.switch.large .switch-paddle.algo {width: 7rem;}
+.switch.rounded2 .switch-paddle {width: 5rem;margin-top: 0.2rem;border-radius: 4px !important;}
+.switch.rounded2 input:checked ~ .switch-paddle::after {left: 3.9rem;width: 0.8rem;border-radius: 4px;}
+.rounded2 .switch-paddle:after { border-radius: 4px;width: 0.8rem;}
 .size-10 { font-size: 10px; }
 .size-12 { font-size: 12px; }
 .size-14 { font-size: 14px; }
@@ -942,8 +943,10 @@ input[readonly] {background: none !important; color: $success-color}
     top: 0.2rem;
     left: 0.2rem; }
 //.matrix button { margin-bottom: 0.5rem}
-.library {border: 1px #efb909 solid;padding: 0.7rem;border-radius: 3px;margin-bottom: 1rem;}
-.library_name {position: absolute; font-size: 0.7rem;top: 0.5rem;background: $black;padding: 0 0.3rem;}
+.library {position: relative; border: 1px #efb909 solid;padding: 0.7rem;border-radius: 3px;margin-bottom: 1rem;}
+.library_name {position: absolute; font-size: 0.7rem;top: -0.6rem;background: $black;padding: 0 0.3rem;}
 //#minO {font-size: 0.8em;color: #808080;padding-left: 0.5rem;}
 .smallinput {height: 1.5rem !important;font-size: 0.8rem !important;}
 #arcsvg {width: 100%;height: 2rem;}
+.selectby {width: 2.5rem;background-color: #0000;border: none;padding: 0 20px 0 0px;}
+.line-height-0 {line-height: 0.25}
