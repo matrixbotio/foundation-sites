@@ -942,10 +942,10 @@ input[readonly] {background: none !important; color: $success-color}
     position: relative;
     top: 0.2rem;
     left: 0.2rem; }
-//.matrix button { margin-bottom: 0.5rem}
+#graph2 { position: absolute;z-index: 2;top: 6px;left: 6px;height: 60px;border-radius: 3px;background: #101010c4}
 .library {position: relative; border: 1px #efb909 solid;padding: 0.7rem;border-radius: 3px;margin-bottom: 1rem;}
 .library_name {position: absolute; font-size: 0.7rem;top: -0.6rem;background: $black;padding: 0 0.3rem;}
-//#minO {font-size: 0.8em;color: #808080;padding-left: 0.5rem;}
+#min-order {font-size: 0.7rem; text-align: center;margin-top: -10px;color: $dark-gray}
 .smallinput {height: 1.5rem !important;font-size: 0.8rem !important;}
 #arcsvg {width: 100%;height: 2rem;}
 .selectby {width: 2.5rem;background-color: #0000;border: none;padding: 0 20px 0 0px;}
