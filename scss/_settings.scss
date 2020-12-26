@@ -61,6 +61,7 @@
 //  56. Xy Grid
 
 @import 'util/util';
+@import 'util/animation';
 
 // 1. Global
 // ---------
@@ -765,10 +766,11 @@ $reveal-background: $black;
 $reveal-width: 600px;
 $reveal-max-width: $global-width;
 $reveal-padding: $global-padding;
-$reveal-border: 1px solid $dark-gray;
+$reveal-border: 1px solid #333333;
 $reveal-radius: 4px;
 $reveal-zindex: 1005;
 $reveal-overlay-background: #292929c2;
+.reveal {box-shadow: 0 0 1px #000;}
 
 // 48. Slider
 // ----------
