@@ -599,7 +599,7 @@ $prototype-arrow-directions: (
   left
 );
 $prototype-arrow-size: 0.4375rem;
-$prototype-arrow-color: $black;
+$prototype-arrow-color: $yellow;
 
 // 30. Prototype Border-Box
 // ------------------------
@@ -807,7 +807,7 @@ $switch-cursor-disabled: not-allowed;
 // 50. Table
 // ---------
 
-$table-background: $black2;
+$table-background: #1f2125; //$black2;
 $table-color-scale: 5%;
 $table-border: 1px solid smart-scale($table-background, $table-color-scale);
 $table-padding: rem-calc(8 10 10);
@@ -830,15 +830,15 @@ $table-stack-breakpoint: medium;
 // --------
 
 $tab-margin: 0;
-$tab-background: $white;
-$tab-color: $primary-color;
-$tab-background-active: $light-gray;
-$tab-active-color: $primary-color;
-$tab-item-font-size: rem-calc(12);
-$tab-item-background-hover: $white;
+$tab-background: $body-background;
+$tab-color: $yellow;
+$tab-background-active: linear-gradient(90deg, $black3, $body-background); //$black3;
+$tab-active-color: $yellow;
+$tab-item-font-size: rem-calc(16);
+$tab-item-background-hover: linear-gradient(90deg, $black2, $body-background); //$black2;
 $tab-item-padding: 1.25rem 1.5rem;
-$tab-content-background: $white;
-$tab-content-border: $light-gray;
+$tab-content-background: $body-background;
+$tab-content-border: $body-background;
 $tab-content-color: $body-font-color;
 $tab-content-padding: 1rem;
 
@@ -916,9 +916,12 @@ $xy-block-grid-max: 8;
 .red {color: $alert-color}
 #logo {height: 2rem; position: relative; top: -0.4rem; padding: 0 10px;}
 .bot {height:2rem; padding: 0 1em 0.1em}
-.switch.rounded2 .switch-paddle {width: 5rem;margin-top: 0.2rem;border-radius: 4px !important;}
-.switch.rounded2 input:checked ~ .switch-paddle::after {left: 3.9rem;width: 0.8rem;border-radius: 4px;}
-.rounded2 .switch-paddle:after { border-radius: 4px;width: 0.8rem;}
+//.switch.rounded2 .switch-paddle {width: 5rem;margin-top: 0.2rem;border-radius: 4px !important;}
+.switch.rounded2 .switch-paddle {width: 100%;margin-top: 0.2rem;border-radius: 4px !important;height:2.3rem !important}
+//.switch.rounded2 input:checked ~ .switch-paddle::after {left: 3.9rem;width: 0.8rem;border-radius: 4px;}
+.switch.rounded2 input:checked ~ .switch-paddle::after {left: 82%;width: 12%;border-radius: 4px;}
+//.rounded2 .switch-paddle:after { border-radius: 4px;width: 0.8rem;}
+.rounded2 .switch-paddle:after { border-radius: 4px;width: 12%;height:1.75rem !important}
 .size-10 { font-size: 10px; }
 .size-12 { font-size: 12px; }
 .size-14 { font-size: 14px; }
@@ -953,9 +956,11 @@ input[readonly] {background: none !important; color: $success-color}
     top: 0.2rem;
     left: 0.2rem; }
 #graph2 { position: absolute;z-index: 2;top: 6px;left: 6px;height: 60px;border-radius: 3px;background: #2b2f37d9}
-.library {position: relative; border: 1px $yellow solid;padding: 0.7rem;border-radius: 3px;margin-bottom: 1rem;}
-.library_name {position: absolute; font-size: 0.7rem;top: -0.6rem;background: $black;padding: 0 0.3rem;}
-#min-order {font-size: 0.7rem; text-align: center;margin-top: -10px;color: $dark-gray}
+.library {position: relative; border: 1px $yellow solid;padding: 1rem 0.7rem;border-radius: 3px;margin-bottom: 1rem;}
+.library_name {position: absolute; font-size: 0.8rem;top: -0.7rem;background: $black;padding: 0 0.3rem;}
+.tt_cloud {position: absolute;top: -1.2rem;right: 0.7rem;background: $black;padding: 0 0.1rem;font-size: 1.5rem;}
+.tt_cloud span {font-size: 0.85rem; position: relative;top: -0.25rem;padding-left: 0.2rem;}
+#min-order {font-size: 0.7rem; margin-top: -10px;color: $dark-gray}
 .smallinput {height: 1.5rem !important;font-size: 0.8rem !important;}
 #arcsvg {width: 100%;height: 2rem;}
 .selectby {width: 2.5rem;background-color: #0000;border: none;padding: 0 20px 0 0px;}
@@ -988,3 +993,50 @@ $callout2: #313131;
     opacity: 0.85;
 }
 .door {box-shadow: 0 0 40px #efb90985;border-radius: 4px !important;}
+.coinlogo {height: 1.5rem; margin-bottom: 0.4rem;}
+.balancerow>span { display: inline-block;}
+.balancerow>span:nth-child(1) {width: 40px}
+.balancerow>span:nth-child(2) {width: 64px}
+.balancerow>span:nth-child(3) {width: 120px}
+balancerow>span:nth-child(4) {width: 96px}
+
+.sel2 {position: relative;}
+.sel2-items {
+  position: absolute;
+  z-index: 99;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.sel2-items div {
+  padding: 0.2rem 0.8rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  background-color: $black3;
+  border-bottom: 1px solid $black;
+}
+.sel2-items div:hover {
+  background-color: $black2;
+}
+.sel2-active {
+  background-color: $black2 !important;
+  color: $white;
+}
+.sel2 div img { height: 1.2rem; margin: 0 0.5rem;}
+.sel2>img {position: absolute;top: 0.5rem;right: 0.4rem;height: 1.4rem;}
+.grid_fix {height: 60% !important;z-index: 3;
+  width: 0.1rem !important;position: absolute !important;top: 20%;left: 0;filter: opacity(0.5);}
+.grid_fix>.slider-handle {height: 0.5rem !important}
+.leverage {
+    color: $yellow !important;
+    border-color: $yellow !important;
+    background-color: #3c2e10 !important;
+  }
+  .leverage:hover { opacity: 0.5}
+  .h0 {
+    color: $white;
+    border-bottom: 2px solid $yellow;
+    margin: 1rem 0 1.8rem;
+    padding-bottom: 0.5rem;
+    font-size: 1.1em;
+  }

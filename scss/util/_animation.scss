@@ -83,3 +83,32 @@
     transform: rotate(359deg);
   }
 }
+
+.pulse {
+  position:relative;
+}
+.pulse:after {
+  content:"";
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  border: 3px solid #f0b90b;
+  position:absolute;
+  top: 3%;
+  left: 17%;
+  animation: pulse 2s ease 0s infinite;
+}
+@keyframes pulse {
+  0% {
+      opacity: 1;
+      transform: scale(1);
+  }
+  80% {
+      opacity: 0;
+      transform: scale(2);
+  }
+  100% {
+      opacity: 0;
+      transform: scale(3);
+  }
+}
