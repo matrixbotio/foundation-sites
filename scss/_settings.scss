@@ -807,8 +807,8 @@ $switch-cursor-disabled: not-allowed;
 // 50. Table
 // ---------
 
-$table-background: #1f2125; //$black2;
-$table-color-scale: 5%;
+$table-background: #1a1b1f; //$black2;
+$table-color-scale: 3%;
 $table-border: 1px solid smart-scale($table-background, $table-color-scale);
 $table-padding: rem-calc(8 10 10);
 $table-hover-scale: 2%;
@@ -956,9 +956,24 @@ input[readonly] {background: none !important; color: $success-color}
     top: 0.2rem;
     left: 0.2rem; }
 #graph2 { position: absolute;z-index: 2;top: 6px;left: 6px;height: 60px;border-radius: 3px;background: #2b2f37d9}
-.library {position: relative; border: 1px $yellow solid;padding: 1rem 0.7rem;border-radius: 3px;margin-bottom: 1rem;}
-.library_name {position: absolute; font-size: 0.8rem;top: -0.7rem;background: $black;padding: 0 0.3rem;}
-.tt_cloud {position: absolute;top: -1.2rem;right: 0.7rem;background: $black;padding: 0 0.1rem;font-size: 1.5rem;}
+.library {
+  position: relative; border: 1px #f0b90b52 solid;padding: 0 0.7rem 0.5rem;border-radius: 3px;
+  margin: 0 -0.9rem 1rem;
+}
+//.library_name {position: absolute; font-size: 0.8rem;top: -0.7rem;background: $black;padding: 0 0.3rem;}
+.library_name {
+    font-size: 0.8rem;
+    background: #9479221f; //#efb90e1f;
+    margin: 0 -0.7rem 0.5rem;
+    padding: 0.3rem 0.5rem;
+}
+//.tt_cloud {position: absolute;top: -1.2rem;right: 0.7rem;background: $black;padding: 0 0.1rem;font-size: 1.5rem;}
+.tt_cloud {
+  position: absolute;
+  top: -0.3rem;
+  right: 0.3rem;
+  font-size: 1.5rem;
+}
 .tt_cloud span {font-size: 0.85rem; position: relative;top: -0.25rem;padding-left: 0.2rem;}
 #min-order {font-size: 0.7rem; margin-top: -10px;color: $dark-gray}
 .smallinput {height: 1.5rem !important;font-size: 0.8rem !important;}
@@ -970,7 +985,19 @@ $callout2: #313131;
           text-align: center;border-radius: 50%;}
 .yellow-circle {@extend %circle; background: $yellow; color: $black;}
 .gray-circle {@extend %circle; background: $dark-gray; color: $callout2}
-.callout2 {display: inline-block;background: $callout2;font-size: 0.85rem;margin: 0.3rem;padding: 0.6rem 0.7rem;width: 15rem;border-radius: 3px;}
+.scalable {
+  display: inline-block;
+  position: relative;
+  margin: 0.3rem;
+}
+.callout2 {
+  transform-origin: left top;
+  background: $callout2;
+  font-size: 0.85rem;
+  padding: 0.6rem 0.7rem;
+  width: 15rem;
+  border-radius: 3px;
+}
 .progress2 {background: linear-gradient(to right, $green, $red);height: 0.8rem;
     margin-bottom: 0.5rem;border-radius: 2px;}
 .progress-segment {background: repeating-linear-gradient(to right, #0000, #0000 4%, #313131 4%, #313131 5%);
@@ -998,7 +1025,7 @@ $callout2: #313131;
 .balancerow>span:nth-child(1) {width: 40px}
 .balancerow>span:nth-child(2) {width: 64px}
 .balancerow>span:nth-child(3) {width: 120px}
-balancerow>span:nth-child(4) {width: 96px}
+.balancerow>span:nth-child(4) {width: 96px}
 
 .sel2 {position: relative;}
 .sel2-items {
@@ -1032,11 +1059,18 @@ balancerow>span:nth-child(4) {width: 96px}
     border-color: $yellow !important;
     background-color: #3c2e10 !important;
   }
-  .leverage:hover { opacity: 0.5}
-  .h0 {
-    color: $white;
-    border-bottom: 2px solid $yellow;
-    margin: 1rem 0 1.8rem;
-    padding-bottom: 0.5rem;
-    font-size: 1.1em;
+.leverage:hover { opacity: 0.5}
+.h0 {
+  color: $white;
+  border-bottom: 2px solid $yellow;
+  margin: 1rem 0 1.8rem;
+  padding-bottom: 0.5rem;
+  font-size: 1.1em;
   }
+.inactive {
+  filter: grayscale(1) opacity(0.5);
+}
+.scale-button {
+  padding: 0.35em 0.5em !important;
+  margin: 0 !important;
+}
